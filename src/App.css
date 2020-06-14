@@ -1,32 +1,157 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-block {
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.form-header {
+  position: absolute;
+  height: 55px;
+  top: 136px;
+  width: 100%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 47px;
+  line-height: 55px;
+  text-align: center;
+  color: #1C1C1C;
 }
+
+.form-header-small {
+  position: absolute;
+  width: 100%;
+  height: 18px;
+  top: 196px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #1C1C1C;
+}
+
+.inputs {
+  position: absolute;
+  width: 374px;
+  align-items: center;
+  top: 312px;
+  display: flex;
+  margin-left: -187px;
+  left: 50%;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #1C1C1C;
+}
+::placeholder {
+  color: #939292;
+}
+
+
+.field {
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 23px;
+  border: none;
+  border-bottom: 1px solid #DEDEDE;
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+.container {
+  position: absolute;
+  top: 627px;
+  left: 50%;
+  margin-left: -154px;
+  font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 16px;
+color: #000000;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  left: -33px;
+  height: 17px;
+  width: 17px;
+  background-color: #FFFFFF;
+  border: 1px solid #DEDEDE
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #DEDEDE;
+}
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #FFFFFF;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 3px;
+  top: 3px;
+  width: 0px;
+  height: 0px;
+  border: solid #1C1C1C;
+  border-width: 0 10px 10px 0;
+}
+
+
+
+
+.submit {
+  position: absolute;
+  height: 44px;
+  left: 50%;
+  margin-left: -187px;
+  top: 677px;
+  width: 374px;
+
+  font-style: normal;
+font-weight: 500;
+font-size: 17px;
+line-height: 20px;
+align-content: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FFFFFF;
+border: none;
+background: #1C1C1C;
+ 
+}
+
+.submit :disabled {
+  background: #DEDEDE;
+}
+
 
 @keyframes App-logo-spin {
   from {
